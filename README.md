@@ -1,47 +1,32 @@
-# Shape Shifters — Production Releases
+# Shape Shifters — Windows Releases
 
-Welcome to the official production release repository for **Shape Shifters**, developed by **FG2G Studio**.
+Official release builds for **Shape Shifters**, developed by **FG2G Studio**.
 
----
+## Downloads
 
-## 🎮 Downloads
+Download the latest production build for Windows PC (64-bit):
 
-Official production builds are published as [GitHub Releases](https://github.com/fg2gstudio/shape-shifters-releases/releases).
+- **Release:** [ShapeShifters-v1.0.0.zip](https://github.com/fg2gstudio/shape-shifters-releases/releases/download/v1.0.0/ShapeShifters-v1.0.0.zip) (~426 MB)
+- **All Releases:** [GitHub Releases Page](https://github.com/fg2gstudio/shape-shifters-releases/releases)
 
-| Version | Platform | Asset | Status | Direct Download |
-| :--- | :--- | :--- | :--- | :--- |
-| **v1.0.0** | Windows PC (64-bit) | `ShapeShifters-v1.0.0.zip` | Latest Production | [Direct Download](https://github.com/fg2gstudio/shape-shifters-releases/releases/download/v1.0.0/ShapeShifters-v1.0.0.zip) |
+## Installation
 
----
+1. Download `ShapeShifters-v1.0.0.zip`.
+2. Extract the archive to any folder on your computer.
+3. Open the folder and run `ShapeShifters.exe` to play.
 
-## ⚡ Cloudflare Worker (Dynamic Release Redirect)
+## Cloudflare Worker
 
-This repository includes a dynamic Cloudflare Worker (`worker.js` + `wrangler.toml`) that automatically fetches the latest release from the GitHub API and redirects downloads without requiring manual updates.
+This repository includes a lightweight redirect worker (`worker.js`) used by our website to automatically route players to the newest release build.
 
-### Endpoints:
-- `GET /download` or `GET /` — Dynamically redirects (HTTP 302) to the latest `.zip` release asset.
-- `GET /version` — Returns JSON metadata about the latest release (version tag, download URL, size, notes).
-
-### Deployment:
+To run locally or deploy:
 ```bash
-# 1. Login to Cloudflare (one-time setup)
-npx wrangler login
-
-# 2. Deploy the Worker
-npx wrangler deploy
+npm install
+npm run dev
+npm run deploy
 ```
 
----
+## License
 
-## 🚀 Installation & Play Instructions (Windows PC)
-
-1. Download `ShapeShifters-v1.0.0.zip` from the release link or Cloudflare redirect.
-2. Extract the archive to your preferred directory.
-3. Run `ShapeShifters.exe` (or the game launcher) to play.
-
----
-
-## 📄 License & Intellectual Property
-
-Copyright © 2026 FG2G Studio. All rights reserved.
-Game assets and binaries are provided under the [FG2G Studio Proprietary End User License Agreement (EULA)](./LICENSE).
+Shape Shifters, its source code, audio, 3D assets, and branding are the property of FG2G Studio. 
+See [LICENSE](LICENSE) for the full End User License Agreement.
