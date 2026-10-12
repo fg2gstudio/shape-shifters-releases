@@ -1,0 +1,18 @@
+# Ignore binary release archives and build packages
+*.zip
+*.7z
+*.rar
+*.tar.gz
+*.iso
+*.exe
+*.msi
+
+# OS metadata
+.DS_Store
+Thumbs.db
+Desktop.ini
+
+# Environment and logs
+*.log
+.env
+.env.local
