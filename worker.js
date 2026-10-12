@@ -1,12 +1,8 @@
-// Shape Shifters - Download Redirect Worker
-// FG2G Studio
-
 const REPO_OWNER = "fg2gstudio";
 const REPO_NAME = "shape-shifters-releases";
 const GITHUB_API_URL = `https://api.github.com/repos/${REPO_OWNER}/${REPO_NAME}/releases/latest`;
 const FALLBACK_DOWNLOAD_URL = "https://github.com/fg2gstudio/shape-shifters-releases/releases/download/v1.0.0/ShapeShifters-v1.0.0.zip";
 
-// Basic in-memory rate limiting per edge instance
 const rateLimits = new Map();
 const WINDOW_MS = 60 * 1000;
 const MAX_PER_WINDOW = 20;
@@ -91,7 +87,6 @@ export default {
       console.warn("Could not fetch latest release, using fallback:", err.message);
     }
 
-    // Release metadata endpoint for web or launchers
     if (path === "/version" || path === "/api/version") {
       return new Response(
         JSON.stringify(
@@ -116,7 +111,6 @@ export default {
       );
     }
 
-    // Redirect download paths
     if (
       path === "/" ||
       path === "/download" ||

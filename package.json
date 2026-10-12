@@ -1,20 +1,12 @@
 {
   "name": "shape-shifters-download-worker",
   "version": "1.0.0",
-  "description": "Cloudflare Worker redirect service for Shape Shifters game downloads",
   "type": "module",
   "main": "worker.js",
   "scripts": {
     "dev": "wrangler dev",
     "deploy": "wrangler deploy"
   },
-  "keywords": [
-    "cloudflare-worker",
-    "shape-shifters",
-    "fg2g"
-  ],
-  "author": "FG2G Studio",
-  "license": "UNLICENSED",
   "devDependencies": {
     "wrangler": "^3.50.0"
   }
