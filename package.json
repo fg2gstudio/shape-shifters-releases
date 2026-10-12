@@ -2,6 +2,7 @@
   "name": "shape-shifters-download-worker",
   "version": "1.0.0",
   "description": "Cloudflare Worker redirect service for Shape Shifters game downloads",
+  "type": "module",
   "main": "worker.js",
   "scripts": {
     "dev": "wrangler dev",
